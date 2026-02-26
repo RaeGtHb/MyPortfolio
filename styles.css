@@ -7,7 +7,7 @@
 
 body {
     border: 2px solid red;
-    height: 900px;
+    height: 650px;
 }
 
 header {
@@ -36,8 +36,29 @@ nav a {
 
 main {
     border: 2px solid blue;
-    height: 790px;
+    height: 540px;
     display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-container {
+    border: 2px solid yellow;
+}
+
+.right-container {
+    display: flex;
+    justify-content: center;
+}
+
+.right-container img {
+    height: 520px;
 }
 
 footer {
