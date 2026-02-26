@@ -10,3 +10,38 @@ body {
     height: 900px;
 }
 
+header {
+    height: 60px;
+    display: grid;
+    grid-template-columns: 180px 1fr 220px;
+    padding: 20px;
+}
+
+.homeLogo {
+    display: flex;
+}
+
+.emailLogo {
+    display: flex;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    display: flex;
+}
+
+main {
+    border: 2px solid blue;
+    height: 790px;
+    display: grid;
+}
+
+footer {
+    border: 2px solid yellow;
+    height: 50px;
+    display: grid;
+}
