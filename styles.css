@@ -13,15 +13,16 @@ body {
 header {
     height: 60px;
     display: grid;
-    grid-template-columns: 180px 1fr 220px;
+    grid-template-columns: 220px 1fr 380px;
     padding: 20px;
+    font-size: 20px;
 }
 
 .homeLogo {
     display: flex;
 }
 
-.emailLogo {
+.emailIcon {
     display: flex;
 }
 
@@ -46,6 +47,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .middle-container {
