@@ -36,7 +36,6 @@ nav a {
 }
 
 main {
-    border: 2px solid blue;
     height: 540px;
     display: grid;
     grid-template-columns: 100px 1fr 1fr;
@@ -51,15 +50,93 @@ main {
 }
 
 .middle-container {
-    border: 2px solid yellow;
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    padding: 40px;
+    padding: 10px;
+}
+
+.chat-container {
+    display: flex;
+    justify-content: end;
+    width: 500px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.chat-header {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.chat-message {
+    background: #0078ff;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 4px;
+    width: fit-content;
+    max-width: 75%;
+    position: relative;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Bubble tail */
+.chat-message::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    border: 10px solid transparent;
+    border-right-color: #0078ff;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+/* Thinking bubble style */
+.thinking {
+    background: #e4e6eb;
+}
+
+.thinking::after {
+    border-right-color: #e4e6eb;
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dots span {
+    width: 8px;
+    height: 8px;
+    background: #555;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dots span:nth-child(1) { animation-delay: -0.32s; }
+.dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .middle-container h1 {
-    font-size: 100px;
+    font-size: 75px;
 }
 
 .firstName {
@@ -80,7 +157,73 @@ main {
 
 .aboutMeText {
     display: flex;
-    padding: 5px;
+    padding: 10px;
+}
+
+.talkBtn-container {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.talk-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.talk-btn {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #ff3b3b;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
+}
+
+.talk-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Glowing rings */
+.pulse {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 59, 59, 0.4);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    z-index: 1;
+}
+
+.pulse:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.pulse:nth-child(2) {
+    animation-delay: 1s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    70% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .right-container {
