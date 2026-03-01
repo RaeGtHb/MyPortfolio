@@ -5,40 +5,45 @@
 	box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     border: 2px solid red;
-    height: 650px;
+    height: 2630px;
+    width: 2050px;
 }
 
 header {
     height: 60px;
     display: grid;
-    grid-template-columns: 220px 1fr 380px;
+    grid-template-columns: 220px 1fr 1fr;
     padding: 20px;
     font-size: 20px;
+    background-color: #F5F5F5;
 }
 
-.homeLogo {
+.homeLogo, .emailIcon, .emailIcon a, nav, nav a {
     display: flex;
 }
 
 .emailIcon {
-    display: flex;
+    padding-left: 340px;
 }
 
 nav {
-    display: flex;
+    justify-content: end;
+    padding-right: 250px;
     gap: 20px;
 }
 
-nav a {
-    display: flex;
-}
-
 main {
-    height: 540px;
+    height: 630px;
     display: grid;
     grid-template-columns: 100px 1fr 1fr;
+    background-color: #EAEAEA;
 }
 
 .left-container {
@@ -57,12 +62,13 @@ main {
 }
 
 .chat-container {
+    height: 75px;
+    width: 1208px;
     display: flex;
-    justify-content: end;
-    width: 500px;
-    background: #ffffff;
+    justify-content: center;
+    align-items: center;
     border-radius: 15px;
-    padding: 10px;
+    padding: 10px 0px;
 }
 
 .chat-header {
@@ -142,11 +148,13 @@ main {
 .firstName {
     display: flex;
     justify-content: start;
+    padding: 0px 250px;
 }
 
 .lastName {
     display: flex;
     justify-content: end;
+    padding: 0px 250px;
 }
 
 .title {
@@ -157,11 +165,11 @@ main {
 
 .aboutMeText {
     display: flex;
-    padding: 10px;
+    padding: 10px 130px 10px 170px;
 }
 
 .talkBtn-container {
-    height: 180px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,10 +237,23 @@ main {
 .right-container {
     display: flex;
     justify-content: center;
+    align-items: end;
 }
 
 .right-container img {
-    height: 520px;
+    height: 630px;
+}
+
+.project-container {
+    height: 630px;
+}
+
+.resume-container {
+    height: 630px;
+}
+
+.aboutMe-container {
+    height: 630px;
 }
 
 footer {
