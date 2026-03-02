@@ -14,10 +14,11 @@ body {
     border: 2px solid red;
     height: 2630px;
     width: 2050px;
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr 100px;
 }
 
 header {
-    height: 60px;
     display: grid;
     grid-template-columns: 220px 1fr 1fr;
     font-size: 20px;
@@ -26,6 +27,8 @@ header {
 
 .homeLogo, .emailIcon, .emailIcon a, nav, nav a {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .homeLogo img {
@@ -39,7 +42,7 @@ header {
 
 nav {
     justify-content: end;
-    padding: 20px 250px;
+    padding: 20px 200px;
     gap: 20px;
 }
 
@@ -249,18 +252,6 @@ main {
 }
 
 .project-container {
-    height: 630px;
-}
-
-.resume-container {
-    height: 630px;
-}
-
-.aboutMe-container {
-    height: 630px;
-}
-
-.project-container {
     display: grid;
     grid-template-rows: 100px 1fr;
     border: 2px solid blue;
@@ -268,6 +259,8 @@ main {
 
 .title-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid green;
 }
 
@@ -275,10 +268,122 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border: 2px solid yellow;
+    padding: 10px;
+    gap: 20px;
+}
+
+.firstProject-container, .secondProject-container, .thirdProject-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageProject-container {
+    height: 390px;
+    width: 300px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.imageProject-container img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.titleProject-container {
+    font-weight: bold;
+}
+
+/* Modal */
+.modal {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#modalImage {
+    max-width: 80%;
+    max-height: 70vh;
+    border-radius: 10px;
+}
+
+.close {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+    z-index: 1000;
+}
+
+.prev { left: 40px; }
+.next { right: 40px; }
+
+.bottom-thumbs {
+    margin-top: 20px;
+}
+
+.bottom-thumbs img {
+    height: 60px;
+    width: 80px;
+    object-fit: cover;
+    margin: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.bottom-thumbs img.active {
+    opacity: 1;
+    border: 2px solid white;
+}
+
+.bottom-thumbs img:hover {
+    opacity: 1;
+}
+
+.resume-container {
+}
+
+.aboutMe-container {
 }
 
 footer {
     border: 2px solid yellow;
-    height: 50px;
     display: grid;
 }

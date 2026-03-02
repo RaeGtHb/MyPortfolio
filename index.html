@@ -73,21 +73,31 @@
         </div>
         <div class="projects-container">
             <div class="firstProject-container">
-                <div class="titleProject-container">Inventory Management System</div>
                 <div class="imageProject-container">
-                    <img src="" alt="1st">
+                    <img src="https://picsum.photos/id/1015/600/400" onclick="openModal(0)">
                 </div>
+                <div class="titleProject-container">Inventory Management System</div>
             </div>
             <div class="secondProject-container">
-                <div class="titleProject-container">Second Project</div>
                 <div class="imageProject-container">
-                    <img src="" alt="2nd">
+                    <img src="https://picsum.photos/id/1020/600/400" onclick="openModal(1)">
                 </div>
+                <div class="titleProject-container">Second Project</div>
             </div>
             <div class="thirdProject-container">
-                <div class="titleProject-container">Third Project</div>
                 <div class="imageProject-container">
-                    <img src="" alt="3rd">
+                    <img src="https://picsum.photos/id/1035/600/400" onclick="openModal(2)">
+                </div>
+                <div class="titleProject-container">Third Project</div>
+            </div>
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+                <span class="next" onclick="changeImage(1)">&#10095;</span>
+
+                <div class="modal-content">
+                    <img id="modalImage">
+                    <div class="bottom-thumbs" id="bottomThumbs"></div>
                 </div>
             </div>
         </div>

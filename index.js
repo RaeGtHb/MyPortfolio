@@ -1,7 +1,7 @@
-// Icons
+// Header Icons
 lucide.createIcons();
 
-// Message
+// Main Message
 const message = document.getElementById("message");
 const chatBox = document.getElementById("chatBox");
 let timeout;
@@ -33,3 +33,75 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.6 });
 
 observer.observe(chatBox);
+
+// Project Images
+let galleries = [
+  [
+    "https://picsum.photos/id/1015/800/500",
+    "https://picsum.photos/id/1016/800/500",
+    "https://picsum.photos/id/1018/800/500"
+  ],
+  [
+    "https://picsum.photos/id/1020/800/500",
+    "https://picsum.photos/id/1024/800/500",
+    "https://picsum.photos/id/1027/800/500"
+  ],
+  [
+    "https://picsum.photos/id/1035/800/500",
+    "https://picsum.photos/id/1039/800/500",
+    "https://picsum.photos/id/1043/800/500"
+  ]
+];
+
+let currentGallery = 0;
+let currentIndex = 0;
+
+function openModal(galleryIndex) {
+  currentGallery = galleryIndex;
+  currentIndex = 0;
+  document.getElementById("myModal").style.display = "block";
+  showImage();
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+function changeImage(direction) {
+  currentIndex += direction;
+
+  if (currentIndex < 0) {
+    currentIndex = galleries[currentGallery].length - 1;
+  }
+
+  if (currentIndex >= galleries[currentGallery].length) {
+    currentIndex = 0;
+  }
+
+  showImage();
+}
+
+function showImage() {
+  const modalImage = document.getElementById("modalImage");
+  const bottomThumbs = document.getElementById("bottomThumbs");
+
+  modalImage.src = galleries[currentGallery][currentIndex];
+
+  bottomThumbs.innerHTML = "";
+
+  galleries[currentGallery].forEach((img, index) => {
+    const thumb = document.createElement("img");
+    thumb.src = img;
+
+    if (index === currentIndex) {
+      thumb.classList.add("active");
+    }
+
+    thumb.addEventListener("click", () => {
+      currentIndex = index;
+      showImage();
+    });
+
+    bottomThumbs.appendChild(thumb);
+  });
+}
