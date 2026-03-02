@@ -20,7 +20,6 @@ header {
     height: 60px;
     display: grid;
     grid-template-columns: 220px 1fr 1fr;
-    padding: 20px;
     font-size: 20px;
     background-color: #F5F5F5;
 }
@@ -29,13 +28,18 @@ header {
     display: flex;
 }
 
+.homeLogo img {
+    height: 70px;
+    padding-left: 30px;
+}
+
 .emailIcon {
-    padding-left: 340px;
+    padding: 20px 340px;
 }
 
 nav {
     justify-content: end;
-    padding-right: 250px;
+    padding: 20px 250px;
     gap: 20px;
 }
 
@@ -65,10 +69,10 @@ main {
     height: 75px;
     width: 1208px;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     border-radius: 15px;
-    padding: 10px 0px;
+    padding: 10px 400px;
 }
 
 .chat-header {
@@ -148,13 +152,13 @@ main {
 .firstName {
     display: flex;
     justify-content: start;
-    padding: 0px 250px;
+    padding: 0px 300px;
 }
 
 .lastName {
     display: flex;
     justify-content: end;
-    padding: 0px 250px;
+    padding: 0px 300px;
 }
 
 .title {
@@ -254,6 +258,23 @@ main {
 
 .aboutMe-container {
     height: 630px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    border: 2px solid blue;
+}
+
+.title-container {
+    display: flex;
+    border: 2px solid green;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 2px solid yellow;
 }
 
 footer {
