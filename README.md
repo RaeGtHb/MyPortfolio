@@ -8,6 +8,7 @@
 - Grid & Flexbox
 -- Grid for template
 -- Flexbox for content
+-- No height for the containers
 
 - Logo
 -- create creative logo

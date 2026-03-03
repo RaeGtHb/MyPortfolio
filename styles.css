@@ -13,14 +13,18 @@ a {
 body {
     border: 2px solid red;
     height: 2630px;
-    width: 2050px;
+    /* width: 2050px; */
     display: grid;
-    grid-template-rows: 100px 1fr 1fr 1fr 1fr 100px;
+    grid-template-rows: 100px 650px 700px 1fr 1fr 100px;
 }
 
 header {
     display: grid;
     grid-template-columns: 220px 1fr 1fr;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: top 0.3s ease;
     font-size: 20px;
     background-color: #F5F5F5;
 }
@@ -47,7 +51,6 @@ nav {
 }
 
 main {
-    height: 630px;
     display: grid;
     grid-template-columns: 100px 1fr 1fr;
     background-color: #EAEAEA;
@@ -64,6 +67,7 @@ main {
 .middle-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-size: 20px;
     padding: 10px;
 }
@@ -251,24 +255,21 @@ main {
     height: 630px;
 }
 
-.project-container {
+.project-container, .resume-container, .aboutMe-container {
     display: grid;
-    grid-template-rows: 100px 1fr;
-    border: 2px solid blue;
+    grid-template-rows: 150px 1fr;
 }
 
 .title-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid green;
+    font-size: 30px;
 }
 
 .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border: 2px solid yellow;
-    padding: 10px;
     gap: 20px;
 }
 
@@ -296,6 +297,7 @@ main {
 }
 
 .titleProject-container {
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -378,12 +380,24 @@ main {
 }
 
 .resume-container {
+    background-color: #EAEAEA;
 }
 
 .aboutMe-container {
+    border: 2px solid blue;
+    background-color: #F5F5F5;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 300px;
+    font-size: 20px;
 }
 
 footer {
     border: 2px solid yellow;
     display: grid;
+    background-color: #EAEAEA;
 }
