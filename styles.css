@@ -3,6 +3,7 @@
 	padding: 0;
 	font-family: san-serif;
 	box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -10,27 +11,39 @@ a {
     color: inherit;
 }
 
+body, header, main, .project-container, .project-context, .resume-container, .resume-context, .aboutMe-container, footer {
+    display: grid;
+}
+
+.homeLogo, .emailIcon, .emailIcon a, nav, nav a, .left-container, .middle-container, .chat-container, .dots, .right-container, .title-container, .firstProject-container, .secondProject-container, .thirdProject-container, .imageProject-container, .firstName, .lastName, .title, .aboutMeText, .talkBtn-container, .text-container {
+    display: flex;
+}
+
+header, .project-container, .aboutMe-container {
+    background-color: #F5F5F5;
+}
+
+main, .resume-container, footer {
+    background-color: #EAEAEA;
+}
+
 body {
     border: 2px solid red;
     height: 2630px;
     /* width: 2050px; */
-    display: grid;
     grid-template-rows: 100px 650px 700px 1fr 1fr 100px;
 }
 
 header {
-    display: grid;
     grid-template-columns: 220px 1fr 1fr;
     position: sticky;
     top: 0;
     z-index: 100;
     transition: top 0.3s ease;
     font-size: 20px;
-    background-color: #F5F5F5;
 }
 
 .homeLogo, .emailIcon, .emailIcon a, nav, nav a {
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -51,13 +64,10 @@ nav {
 }
 
 main {
-    display: grid;
     grid-template-columns: 100px 1fr 1fr;
-    background-color: #EAEAEA;
 }
 
 .left-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -65,7 +75,6 @@ main {
 }
 
 .middle-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 20px;
@@ -75,7 +84,6 @@ main {
 .chat-container {
     height: 75px;
     width: 1208px;
-    display: flex;
     justify-content: end;
     align-items: center;
     border-radius: 15px;
@@ -121,7 +129,6 @@ main {
 }
 
 .dots {
-    display: flex;
     gap: 6px;
 }
 
@@ -157,31 +164,26 @@ main {
 }
 
 .firstName {
-    display: flex;
     justify-content: start;
     padding: 0px 300px;
 }
 
 .lastName {
-    display: flex;
     justify-content: end;
     padding: 0px 300px;
 }
 
 .title {
-    display: flex;
     justify-content: center;
     font-size: 12px;
 }
 
 .aboutMeText {
-    display: flex;
     padding: 10px 130px 10px 170px;
 }
 
 .talkBtn-container {
     height: 250px;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -246,7 +248,6 @@ main {
 }
 
 .right-container {
-    display: flex;
     justify-content: center;
     align-items: end;
 }
@@ -256,25 +257,21 @@ main {
 }
 
 .project-container, .resume-container, .aboutMe-container {
-    display: grid;
     grid-template-rows: 150px 1fr;
 }
 
 .title-container {
-    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
 }
 
-.projects-container {
-    display: grid;
+.project-context {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
 
 .firstProject-container, .secondProject-container, .thirdProject-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -284,7 +281,6 @@ main {
     height: 390px;
     width: 300px;
     margin: 30px;
-    display: flex;
     align-items: center;
 }
 
@@ -380,24 +376,21 @@ main {
 }
 
 .resume-container {
-    background-color: #EAEAEA;
+    border: 2px solid blue;
 }
 
-.aboutMe-container {
-    border: 2px solid blue;
-    background-color: #F5F5F5;
+.resume-context {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .text-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 50px 300px;
     font-size: 20px;
+    text-indent: 50px;
 }
 
 footer {
     border: 2px solid yellow;
-    display: grid;
-    background-color: #EAEAEA;
 }
