@@ -379,8 +379,62 @@ main {
     border: 2px solid blue;
 }
 
+hr {
+    border: none;
+    height: 2px;
+    background-color: #333;
+    margin: 10px 0;
+}
+
 .resume-context {
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 10px 240px 10px 280px 10px 360px 10px 200px 10px 200px 10px 200px;
+}
+
+.resume-context {
+    display: grid;
+    padding: 0px 200px;
+}
+
+.resume-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-info h1 {
+    font-size: 50px;
+}
+
+.resume-info p, .resume-title {
+    font-size: 30px;
+}
+
+.resume-objective, .work-experience, .skills {
+    font-size: 20px;
+}
+
+.resume-objective, .resume-work, .resume-skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resume-objective p, .work-experience {
+    padding: 30px 0px;
+}
+
+.work-experience {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-company ul {
+    padding: 0px 30px;
+}
+
+.skills {
+    padding: 30px;
 }
 
 .text-container {
