@@ -123,3 +123,5 @@ function showImage() {
     bottomThumbs.appendChild(thumb);
   });
 }
+
+document.getElementById('year').textContent = new Date().getFullYear();

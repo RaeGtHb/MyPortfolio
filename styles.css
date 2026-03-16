@@ -11,14 +11,6 @@ a {
     color: inherit;
 }
 
-body, header, main, .project, .project-container, .resume, .resume-container, .about, footer {
-    display: grid;
-}
-
-.homeLogo, .emailIcon, .emailIcon a, nav, nav a, .home-row-1, .home-row-2, .chat-context, .dots, .home-row-3, .title-context, .cardProject-context, .imageProject-context, .firstName, .lastName, .title, .aboutMeText, .talkBtn-context, .resume-info, .resume-col, .resume-context, .resume-context-col, .text-context {
-    display: flex;
-}
-
 header, .project, .about {
     background-color: #F5F5F5;
 }
@@ -27,10 +19,27 @@ main, .resume, footer {
     background-color: #EAEAEA;
 }
 
+body, header, main, .project, .project-container, .resume, .resume-container, .about, footer {
+    display: grid;
+}
+
+.homeLogo, .emailIcon, .emailIcon a, nav, nav a, .home-row-1, .home-row-2, .chat-context, .dots, .home-row-3, .title-context, .cardProject-context, .imageProject-context, .modal-content, .firstName, .lastName, .title, .aboutMeText, .talkBtn-context, .resume-info, .resume-col, .resume-context, .resume-context-col, .text-context {
+    display: flex;
+}
+
+.home-row-1, .home-row-2, .cardProject-context, .modal-content, .resume-info, .resume-col, .resume-context, .text-context {
+    flex-direction: column;
+}
+
+.homeLogo, .emailIcon, .emailIcon a, nav, nav a, .home-row-1, .home-row-2, .title, .talkBtn-context, .home-row-3, .title-context, .cardProject-context, .modal-content, .resume-info, .resume-col, .resume-context, .text-context, footer {
+    justify-content: center;
+}
+
+header, .home-row-1, .talkBtn-context, .cardProject-context, .title-context, .modal-content, footer {
+    align-items: center;
+}
+
 body {
-    border: 2px solid red;
-    /* height: 2630px; */
-    /* width: 2050px; */
     grid-template-rows: 100px 700px 700px 2100px 700px 100px;
 }
 
@@ -43,11 +52,6 @@ header {
     font-size: 20px;
 }
 
-.homeLogo, .emailIcon, .emailIcon a, nav, nav a {
-    justify-content: center;
-    align-items: center;
-}
-
 .homeLogo img {
     height: 70px;
     padding-left: 30px;
@@ -57,8 +61,11 @@ header {
     padding: 20px 340px;
 }
 
-nav {
+nav, .chat-context, .lastName {
     justify-content: end;
+}
+
+nav {
     padding: 20px 200px;
     gap: 20px;
 }
@@ -68,24 +75,21 @@ main {
 }
 
 .home-row-1 {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
 }
 
 .home-row-2 {
-    flex-direction: column;
-    justify-content: center;
     font-size: 20px;
     padding: 10px;
+}
+
+.chat-context, .imageProject-context, .resume-info {
+    align-items: center;
 }
 
 .chat-context {
     height: 75px;
     width: 1208px;
-    justify-content: end;
-    align-items: center;
     border-radius: 15px;
     padding: 10px 400px;
 }
@@ -121,11 +125,11 @@ main {
 
 /* Thinking bubble style */
 .thinking {
-    background: #e4e6eb;
+    background: #E4E6Eb;
 }
 
 .thinking::after {
-    border-right-color: #e4e6eb;
+    border-right-color: #E4E6Eb;
 }
 
 .dots {
@@ -169,12 +173,10 @@ main {
 }
 
 .lastName {
-    justify-content: end;
     padding: 0px 300px;
 }
 
 .title {
-    justify-content: center;
     font-size: 12px;
 }
 
@@ -184,8 +186,6 @@ main {
 
 .talkBtn-context {
     height: 250px;
-    justify-content: center;
-    align-items: center;
 }
 
 .talk-wrapper {
@@ -248,7 +248,6 @@ main {
 }
 
 .home-row-3 {
-    justify-content: center;
     align-items: end;
 }
 
@@ -261,8 +260,6 @@ main {
 }
 
 .title-context {
-    justify-content: center;
-    align-items: center;
     font-size: 30px;
 }
 
@@ -271,17 +268,10 @@ main {
     gap: 20px;
 }
 
-.cardProject-context {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .imageProject-context {
     height: 200px;
     width: 300px;
     margin: 30px;
-    align-items: center;
 }
 
 .imageProject-context img {
@@ -312,10 +302,6 @@ main {
 .modal-content {
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     position: relative;
 }
@@ -387,15 +373,6 @@ hr {
     margin: 10px 0;
 }
 
-.resume-info, .resume-col {
-    flex-direction: column;
-    justify-content: center;
-}
-
-.resume-info {
-    align-items: center;
-}
-
 .resume-info h1 {
     font-size: 50px;
 }
@@ -410,7 +387,6 @@ hr {
 }
 
 .resume-context {
-    flex-direction: column;
     gap: 20px;
 }
 
@@ -423,13 +399,7 @@ hr {
 }
 
 .text-context {
-    flex-direction: column;
-    justify-content: center;
     padding: 50px 300px;
     font-size: 20px;
     text-indent: 50px;
-}
-
-footer {
-    border: 2px solid yellow;
 }
