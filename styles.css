@@ -388,9 +388,6 @@ hr {
 
 .resume-context {
     grid-template-rows: 200px 10px 240px 10px 280px 10px 360px 10px 200px 10px 200px 10px 200px;
-}
-
-.resume-context {
     display: grid;
     padding: 0px 200px;
 }
@@ -410,7 +407,7 @@ hr {
     font-size: 30px;
 }
 
-.resume-objective, .work-experience, .skills {
+.resume-objective, .work-experience, .skills, .school-education {
     font-size: 20px;
 }
 
@@ -424,18 +421,20 @@ hr {
     padding: 30px 0px;
 }
 
-.work-experience {
+.work-experience, .school-education {
     display: flex;
     justify-content: space-between;
 }
 
-.work-company ul {
+.resume-list, .resume-date {
     padding: 0px 30px;
 }
 
 .skills {
     padding: 30px;
 }
+
+.school-education {}
 
 .text-container {
     flex-direction: column;
