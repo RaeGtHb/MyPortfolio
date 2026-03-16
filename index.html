@@ -28,7 +28,7 @@
     </header>
 
     <main id="home">
-        <div class="left-container">
+        <div class="home-row-1">
             <a href="https://www.linkedin.com/in/dian-andrae-sanchez-b19114380/">
                 <i data-lucide="linkedin"></i>
             </a>
@@ -39,8 +39,8 @@
                 <i data-lucide="facebook"></i>
             </a>
         </div>
-        <div class="middle-container">
-            <div class="chat-container" id="chatBox">
+        <div class="home-row-2">
+            <div class="chat-context" id="chatBox">
                 <div id="message" class="chat-message"></div>
             </div>
             <div class="firstName">
@@ -55,7 +55,7 @@
             <div class="aboutMeText">
                 <p>AKA Rae, Software Developer from Bacolor, Pampanga with an experience in building complex applications with modern technologies.</p>
             </div>
-            <div class="talkBtn-container">
+            <div class="talkBtn-context">
                 <a href="#project">
                     <div class="talk-wrapper">
                         <div class="pulse"></div>
@@ -66,30 +66,30 @@
             </div>
             
         </div>
-        <div class="right-container">
+        <div class="home-row-3">
             <img src="img/Me.png" alt="Me">
         </div>
     </main>
 
-    <div class="project-container" id="project">
-        <div class="title-container">
+    <div class="project" id="project">
+        <div class="title-context">
             <h1>Projects</h1>
         </div>
-        <div class="project-context">
-            <div class="firstProject-container">
-                <div class="imageProject-container">
+        <div class="project-container">
+            <div class="cardProject-context">
+                <div class="imageProject-context">
                     <img src="https://picsum.photos/id/1015/600/400" onclick="openModal(0)">
                 </div>
                 <div class="titleProject-container">Inventory Management System</div>
             </div>
-            <div class="secondProject-container">
-                <div class="imageProject-container">
+            <div class="cardProject-context">
+                <div class="imageProject-context">
                     <img src="https://picsum.photos/id/1020/600/400" onclick="openModal(1)">
                 </div>
                 <div class="titleProject-container">Second Project</div>
             </div>
-            <div class="thirdProject-container">
-                <div class="imageProject-container">
+            <div class="cardProject-context">
+                <div class="imageProject-context">
                     <img src="https://picsum.photos/id/1035/600/400" onclick="openModal(2)">
                 </div>
                 <div class="titleProject-container">Third Project</div>
@@ -107,48 +107,50 @@
         </div>
     </div>
 
-    <div class="resume-container" id="resume">
-        <div class="title-container">
+    <div class="resume" id="resume">    
+        <div class="title-context">
             <h1>Resume</h1>
         </div>
-        <div class="resume-context">
+        <div class="resume-container">
             <div class="resume-info">
                 <h1>DIAN ANDRAE SANCHEZ</h1>
                 <p>BLK 43 LOT 110 CALLE 35 XEVERA, BACOLOR, PAMPANGA • 962-385-2818 • DIAN.ANDRAE98@GMAIL.COM</p>
             </div>
             <hr>
-            <div class="resume-objective">
+            <div class="resume-col">
                 <div class="resume-title">
                     <h2>PROFESSIONAL OBJECTIVES</h2>
                 </div>
                 <p>Motivated recent graduate seeking an entry-level position to apply my skills, contribute to the company's success, and grow professionally. Eager to learn new challenges and develop my abilities to become a valuable team member.</p>
             </div>
             <hr>
-            <div class="resume-work">
+            <div class="resume-col">
                 <div class="resume-title">
                     <h2>WORK EXPERIENCE</h2>
                 </div>
-                <div class="work-experience">
-                    <div>
-                        <h4>Programming Intern, BB88 Advertising & Digital Solution Inc.</h4>
-                        <div class="resume-list">
-                            <ul>
-                                <li>Collaborated with the team to style and design various projects, enhancing visual appeal and user experience.</li>
-                                <li>Gained hands-on experience in project planning, styling, and coding best practices.</li>
-                            </ul>
+                <div class="resume-context">
+                    <div class="resume-context-col">
+                        <div>
+                            <h4>Programming Intern, BB88 Advertising & Digital Solution Inc.</h4>
+                            <div class="resume-list">
+                                <ul>
+                                    <li>Collaborated with the team to style and design various projects, enhancing visual appeal and user experience.</li>
+                                    <li>Gained hands-on experience in project planning, styling, and coding best practices.</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="resume-date">
-                        <h4>MAR 2025 - MAY 2025</h4>
+                        <div class="resume-date">
+                            <h4>MAR 2025 - MAY 2025</h4>
+                        </div>
                     </div>
                 </div>
             </div>
             <hr>
-            <div class="resume-skill">
+            <div class="resume-col">
                 <div class="resume-title">
                     <h2>SKILLS</h2>
                 </div>
-                <div class="skills">
+                <div class="resume-list">
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
@@ -160,64 +162,73 @@
                 </div>
             </div>
             <hr>
-            <div class="resume-education">
+            <div class="resume-col">
                 <div class="resume-title">
                     <h2>EDUCATION</h2>
                 </div>
-                <div class="school-education">
-                    <div>
-                        <h4>Bachelor of Science in Information Technology</h4>
-                        <p>Our Lady of Fatima University</p>
+                <div class="resume-context">
+                    <div class="resume-context-col">
+                        <div>
+                            <h4>Bachelor of Science in Information Technology</h4>
+                            <p>Our Lady of Fatima University</p>
+                        </div>
+                        <div class="resume-date">
+                            <h4>2021 - 2025</h4>
+                        </div>
                     </div>
-                    <div class="resume-date">
-                        <h4>2021 - 2025</h4>
+                    <div class="resume-context-col">
+                        <div>
+                            <h4>General Academic Strand</h4>
+                            <p>Don Antonio Lee Chi Uan Integrated School</p>
+                        </div>
+                        <div class="resume-date">
+                            <h4>2017 - 2021</h4>
+                        </div>
                     </div>
                 </div>
-                <div class="school-education">
-                    <div>
-                        <h4>General Academic Strand</h4>
-                        <p>Don Antonio Lee Chi Uan Integrated School</p>
-                    </div>
-                    <div class="resume-date">
-                        <h4>2017 - 2021</h4>
-                    </div>
-                </div>
+                
             </div>
             <hr>
-            <div class="resume-seminar">
+            <div class="resume-col">
                 <div class="resume-title">
                     <h2>SEMINARS ATTENDED</h2>
                 </div>
-                <div>
+                <div class="resume-context">
                     <div>
                         <h4>CCS TECHTALK SERIES 2024</h4>
-                        <ul>
-                            <li>Strengthening Cybersecurity : Insights on Tracing Cyberattacks with Strategic Approaches</li>
-                        </ul>
+                        <div class="resume-list">
+                            <ul>
+                                <li>Strengthening Cybersecurity : Insights on Tracing Cyberattacks with Strategic Approaches</li>
+                            </ul>
+                        </div>
                     </div>
                     <div>
                         <h4>CCS TECHTALK SERIES 2022</h4>
-                        <ul>
-                            <li>Work-life Balance : Why it matters?</li>
-                            <li>Creating Logo Design using Adobe Illustrator</li>
-                        </ul>
+                        <div class="resume-list">
+                            <ul>
+                                <li>Work-life Balance : Why it matters?</li>
+                                <li>Creating Logo Design using Adobe Illustrator</li>
+                            </ul>
+                        </div>
                     </div>
                     <div>
                         <h4>CSS TECHTALK SERIES 2022</h4>
-                        <ul>
-                            <li>Developer Productivity Tools</li>
-                            <li>Laravel Framework</li>
-                            <li>From Campus to Career : A Guide to Life after College</li>
-                        </ul>
+                        <div class="resume-list">
+                            <ul>
+                                <li>Developer Productivity Tools</li>
+                                <li>Laravel Framework</li>
+                                <li>From Campus to Career : A Guide to Life after College</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <hr>
-            <div class="resume-certificate">
+            <div class="resume-col">
                 <div class="resume-title">
                     <h2>CERTIFICATIONS</h2>
                 </div>
-                <div>
+                <div class="resume-list">
                     <ul>
                         <li>Professional Certification BIFPC™</li>
                         <li>Endpoint Security</li>
@@ -233,11 +244,11 @@
         </div>
     </div>
 
-    <div class="aboutMe-container" id="about">
-        <div class="title-container">
+    <div class="about" id="about">
+        <div class="title-context">
             <h1>About Me</h1>
         </div>
-        <div class="text-container">
+        <div class="text-context">
             <p>Hey there! I’m Dian Andrae Sanchez, and welcome to my portfolio. I grew up in Pampanga, where I learned the importance of love, care, respect, responsibility, trust, and loyalty. For me, loyalty isn’t something you can take for granted—it’s a two-way street. If you can’t offer it to me, don’t expect it back. Responsibility goes hand-in-hand with loyalty. To me, it’s all about owning your actions and being accountable for what you do.</p>
             <br>
             <p>Here in Pampanga, I’ve got a few go-to spots, especially for my late-night rides. I love grabbing a cold coffee in a quiet, cozy corner where I can just think about the future and what’s next. I tend to stay longer than I plan, just reflecting on things. But I’m rarely alone—being by myself feels too quiet. So, I always invite my friends who are free or up for joining me. On weekends, my friends and I usually set up get-togethers, whether it's just to bond or play sports.</p>
