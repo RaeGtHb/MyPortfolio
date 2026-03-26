@@ -53,8 +53,17 @@ header {
 }
 
 .homeLogo img {
-    height: 70px;
+    width: 150px;
     padding-left: 30px;
+}
+
+.emailIcon img, nav img {
+    width: 60px;
+}
+
+.emailIcon h4 {
+    display: flex;
+    align-items: center;
 }
 
 .emailIcon {
@@ -66,12 +75,16 @@ nav, .chat-context, .lastName {
 }
 
 nav {
+    align-items: center;
     padding: 20px 200px;
-    gap: 20px;
 }
 
 main {
     grid-template-columns: 100px 1fr 1fr;
+}
+
+.home-row-1 img {
+    width: 100px;
 }
 
 .home-row-1 {

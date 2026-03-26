@@ -2,21 +2,19 @@
 lucide.createIcons();
 
 // Header Scroll
-let lastScrollTop = 0; // Keeps track of the last scroll position
-const header = document.getElementById('header'); // Get the header element
+let lastScrollTop = 0;
+const header = document.getElementById('header');
 
 window.addEventListener('scroll', function () {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScroll > lastScrollTop) {
-    // Scrolling down
-    header.style.top = '-100px'; // Hide header (adjust based on header height)
+    header.style.top = '-100px';
   } else {
-    // Scrolling up
-    header.style.top = '0'; // Show header
+    header.style.top = '0';
   }
   
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
 // Main Message
@@ -55,9 +53,14 @@ observer.observe(chatBox);
 // Project Images
 let galleries = [
   [
-    "https://picsum.photos/id/1015/800/500",
-    "https://picsum.photos/id/1016/800/500",
-    "https://picsum.photos/id/1018/800/500"
+    "img/project1/1.jpg",
+    "img/project1/2.jpg",
+    "img/project1/3.jpg",
+    "img/project1/4.jpg",
+    "img/project1/5.jpg",
+    "img/project1/6.jpg",
+    "img/project1/7.jpg",
+    "img/project1/8.jpg"
   ],
   [
     "https://picsum.photos/id/1020/800/500",
@@ -87,15 +90,8 @@ function closeModal() {
 
 function changeImage(direction) {
   currentIndex += direction;
-
-  if (currentIndex < 0) {
-    currentIndex = galleries[currentGallery].length - 1;
-  }
-
-  if (currentIndex >= galleries[currentGallery].length) {
-    currentIndex = 0;
-  }
-
+  if (currentIndex < 0) currentIndex = galleries[currentGallery].length - 1;
+  if (currentIndex >= galleries[currentGallery].length) currentIndex = 0;
   showImage();
 }
 
@@ -104,6 +100,7 @@ function showImage() {
   const bottomThumbs = document.getElementById("bottomThumbs");
 
   modalImage.src = galleries[currentGallery][currentIndex];
+  modalImage.alt = "Project Image " + (currentIndex + 1);
 
   bottomThumbs.innerHTML = "";
 
@@ -111,9 +108,7 @@ function showImage() {
     const thumb = document.createElement("img");
     thumb.src = img;
 
-    if (index === currentIndex) {
-      thumb.classList.add("active");
-    }
+    if (index === currentIndex) thumb.classList.add("active");
 
     thumb.addEventListener("click", () => {
       currentIndex = index;
